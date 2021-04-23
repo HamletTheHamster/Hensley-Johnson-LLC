@@ -90,16 +90,17 @@ func main() {
       maxCars++
       nCarMonthlyRevenue = totalMonthlyRevenue
     }
-
   }
 
   fmt.Printf("--------------------------------------------------------------")
 
-  fmt.Printf("\n\n\n\nRevenue per year with these %d cars: %.2f",
-    n, nCarMonthlyRevenue*12)
+  yearlyRevenue := nCarMonthlyRevenue*12
 
-  fmt.Printf("\nTotal after 2 years: %.2f", nCarMonthlyRevenue*12*2)
-  fmt.Printf("\nTotal after 3 years: %.2f", nCarMonthlyRevenue*12*3)
-  fmt.Printf("\nTotal after 4 years: %.2f", nCarMonthlyRevenue*12*4)
+  fmt.Printf("\n\n\n\nRevenue per year with these %d cars: %.2f",
+    n, yearlyRevenue)
+
+  fmt.Printf("\nTotal after 2 years: %.2f", yearlyRevenue*2)
+  fmt.Printf("\nTotal after 3 years: %.2f", yearlyRevenue*3)
+  fmt.Printf("\nTotal after 4 years: %.2f", yearlyRevenue*4)
 
 }
