@@ -10,14 +10,22 @@ func main() {
   fmt.Printf(" | nCar Calculator |        by Joel\n")
   fmt.Printf("  -----------------\n")
 
+  // Definitions
+
+  var car1Cost,
+      car1MonthlyRevenue,
+      nextCarCost,
+      nextCarMonthlyRevenue,
+      nextCarOutsideContributions,
+      addMonths float64
+  var anotherCar bool
+
   // 1 Car
 
   fmt.Printf("\n\nCost of car 1: ")
-  var car1Cost float64
   fmt.Scanf("%f", &car1Cost)
 
   fmt.Printf("Monthly revenue of car 1: ")
-  var car1MonthlyRevenue float64
   fmt.Scanf("%f", &car1MonthlyRevenue)
 
   monthsFromNow := car1Cost/car1MonthlyRevenue;
@@ -31,11 +39,6 @@ func main() {
   n := 1;
   maxCars := 2;
   nCarMonthlyRevenue := car1MonthlyRevenue;
-  var nextCarCost float64
-  var nextCarOutsideContributions float64
-  var nextCarMonthlyRevenue float64
-  var anotherCar bool
-  var addMonths float64
 
   for n < maxCars {
 
