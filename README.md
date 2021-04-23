@@ -1,6 +1,6 @@
 # Hensley-Johnson-LLC
 
-### Repository for any calculations, plots, and other data analytics for Hensley & Johnson LLC.
+### Repository for any calculations, plots, and other data analytics for Hensley & Johnson LLC
 
 <br /><br />
 
