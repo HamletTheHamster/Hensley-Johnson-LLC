@@ -26,23 +26,23 @@ func main() {
 
   for n < maxCars {
 
-    fmt.Printf("Cost of car %i: ", n+1)
+    fmt.Printf("Cost of car %d: ", n+1)
     var nextCarCost float64
     fmt.Scanf("%f", &nextCarCost)
 
-    fmt.Printf("Car %i revenue alone will buy car %i after %.1f months.\n\n",
+    fmt.Printf("Car %d revenue alone will buy car %d after %.1f months.\n\n",
       n, n+1, nextCarCost/nCarMonthlyRevenue)
 
-    fmt.Printf("Outside contributions toward purchase of car %i: ", n+1)
+    fmt.Printf("Outside contributions toward purchase of car %d: ", n+1)
     var nextCarOutsideContributions float64
     fmt.Scanf("%f", &nextCarOutsideContributions)
 
-    fmt.Printf("With this, car %i can be purchased after %.1f months\n\n",
+    fmt.Printf("With this, car %d can be purchased after %.1f months\n\n",
       n+1, (nextCarCost - nextCarOutsideContributions)/nCarMonthlyRevenue)
 
     // n+1 Cars
 
-    fmt.Printf("Monthly revenue of car %i: ", n+1)
+    fmt.Printf("Monthly revenue of car %d: ", n+1)
     var nextCarMonthlyRevenue float64
     fmt.Scanf("%f", &nextCarMonthlyRevenue)
 
@@ -51,7 +51,7 @@ func main() {
     fmt.Printf("Total monthly revenue is now %.2f\n\n",
       totalMonthlyRevenue)
 
-    fmt.Printf("Cost of car %i is recovered after %.1f months.\n\n",
+    fmt.Printf("Cost of car %d is recovered after %.1f months.\n\n",
       n+1, nextCarCost/totalMonthlyRevenue)
 
     fmt.Printf("Buying another car? (true/false) ")
