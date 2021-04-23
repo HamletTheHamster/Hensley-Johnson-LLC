@@ -35,6 +35,7 @@ func main() {
   var nextCarOutsideContributions float64
   var nextCarMonthlyRevenue float64
   var anotherCar bool
+  var addMonths float64
 
   for n < maxCars {
 
@@ -51,12 +52,14 @@ func main() {
       n+1)
     fmt.Scanf("%f", &nextCarOutsideContributions)
 
+    addMonths = (nextCarCost - nextCarOutsideContributions)/nCarMonthlyRevenue
+
     if nextCarOutsideContributions != 0 {
       fmt.Printf("With this, car %d can be purchased after %.1f months, ",
-        n+1, (nextCarCost - nextCarOutsideContributions)/nCarMonthlyRevenue)
+        n+1, addMonths)
 
       monthsFromNow -= nextCarCost/nCarMonthlyRevenue
-      monthsFromNow += (nextCarCost - nextCarOutsideContributions)/nCarMonthlyRevenue
+      monthsFromNow += addMonths
 
       fmt.Printf("or %.1f months from now.", monthsFromNow)
 
@@ -92,7 +95,7 @@ func main() {
     }
   }
 
-  fmt.Printf("--------------------------------------------------------------")
+  fmt.Printf("----------------------------------------------------------------")
 
   yearlyRevenue := nCarMonthlyRevenue*12
 
@@ -102,5 +105,7 @@ func main() {
   fmt.Printf("\nTotal after 2 years: %.2f", yearlyRevenue*2)
   fmt.Printf("\nTotal after 3 years: %.2f", yearlyRevenue*3)
   fmt.Printf("\nTotal after 4 years: %.2f", yearlyRevenue*4)
+
+  fmt.Printf("\n\n")
 
 }
